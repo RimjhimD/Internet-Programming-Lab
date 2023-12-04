@@ -1,0 +1,115 @@
+<!--Table in html -->
+
+<!DOCTYPE html>
+
+<!-- CSS part(internal css) -->
+<!--
+<style>
+
+    body {
+
+        background-color:rgb(255, 245, 105);
+    }
+
+    h1 {
+
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align:center;
+    }
+
+</style>
+-->
+
+<head>
+   <title> Welcome page </title>
+   <link rel="stylesheet" href="main.css">
+
+</head>
+
+<h1 class="center">My Table</h1>
+
+
+ <h2 align="center">Table Example</h2>
+ <table border="7" align="center" width="78%">
+    
+    <tr>
+         <th>  Col 1 </th>
+         <th>  Col 2 </th>
+         <th>  Col 3 </th>
+    </tr>
+    
+    <tr>
+       <td rowspan="2">Row 1 col 1</td>  <!-- Rowspan(row merging)  -->
+       <td>Row 1 col 2</td>
+       <td>Row 1 col 3</td>
+    </tr>
+
+    <tr>
+        <td>Row 2 col 2</td>
+        <td>Row 2 col 3</td>
+    </tr>
+
+    <tr>
+        <td>Row 3 col 1</td>
+        <td>Row 3 col 2</td>
+        <td>Row 3 col 3</td>
+    </tr>
+
+    <tr>
+        <td>Row 4 col 1</td>
+        <td>Row 4 col 2</td>
+        <td>Row 4 col 3</td>
+
+    </tr>
+
+    <tr>
+        <td colspan="3">Row 5 col 1</td>  <!-- COLSPAN(column merging) -->
+
+
+    </tr>
+
+
+
+ </table>
+
+
+<table>
+    <h2 align="center">Table Example</h2>
+<table border="7" align="center" width="78%">
+    <thead>
+    <tr>
+    <td colspan="5" align="center">  This is the head of the table.  </td>
+    </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="4" align="center">This is the foot of the table.</td>
+        </tr>
+    </tfoot>
+
+    <tbody>
+
+    <tr>
+        <th>  Col 1 </th>
+        <th>  Col 2 </th>
+        <th>  Col 3 </th>
+   </tr>
+   
+   <tr>
+      <td>Row 1 col 1</td>
+      <td>Row 1 col 2</td>
+      <td>Row 1 col 3</td>
+   </tr>
+
+   <tr>
+       <td>Row 2 col 2</td>
+       <td>Row 2 col 3</td>
+   </tr>
+
+   <tr>
+       <td>Row 3 col 1</td>
+       <td>Row 3 col 2</td>
+       <td>Row 3 col 3</td>
+   </tr>
+
+   </tbody>
