@@ -1,0 +1,62 @@
+/* Box Creation */
+h1 {
+    color:black;
+    border:2px solid black;
+    margin:25px;
+    padding:7px;
+    width:40%;
+}
+
+ .cls1 {
+   
+    color:black;
+   /* margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 34px;
+    margin-right: 45px;
+    */
+    width: 40%;
+    padding:10px;
+    border:5px solid black;
+    display:inline-block;
+
+}
+
+.cls2 {
+
+    color:black;
+    /* margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 34px;
+    margin-right: 45px;
+    */
+    width:40%;
+    padding:10px;
+    border:5px solid black;
+    display:inline-block;
+
+}
+
+/* Table Creation */
+
+.table {
+    border: 2px solid black;
+}
+
+th {
+    background-color:bisque;
+}
+
+td {
+    text-align:center;
+
+}
+tr :hover {
+
+    background-color: cyan;
+
+}
+
+tr :nth-child(even) {
+    background-color:chartreuse
+}
