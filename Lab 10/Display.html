@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+   <div  class="row">
+     <div class="col-4 offset-4">
+    <h1>JSON DATA</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="content"></tbody>
+    </table>
+    </div>
+</div>
+</div>
+<script>
+    fetch('./Data.json')
+    .then((response)=>{
+        return response.json();
+    })
+    .then((data)=>{
+        var placeholder = document.querySelector("#content");
+        var tabledata = '';
+        for(var i=0;i<data.length;i++){
+            //document.getElementById("content").innerHTML +=data[i].name+data[i].age+''+data[i]+data[i].address+''
+
+            tabledata += '<tr><td>' + data[i].name+'</td><td>'+data[i].age+'</td><td>' +data[i].city+'</td><td>';
+            }
+        placeholder.innerHTML = tabledata;
+        })
+        .catch((err)=>{
+          console.log(err);
+
+        });    
+</script>
+</body>
+</html>
