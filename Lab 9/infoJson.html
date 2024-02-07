@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="content" class="col-5 offset-5">
+
+    </div>
+    <div type="button " class="btn btn-primary" onclick="save_data()">Download
+
+    </div>
+<script>
+    function save_data(){
+      const person ='{"name":"john","age":"24","address":"ctg","dob":"2022-12-30"}'
+    const obj=JSON.parse(person);
+    obj.dob = new Date(obj.dob);
+    console.log(obj);
+    //document.getElementById("content").innerHTML=obj.name+' '+obj.age+' '+obj.address+''+obj.dob;
+    const str =JSON.stringify(obj);
+    //localStorage.setItem("data",obj1);
+    //var data = localStorage.getItem("data");
+    //const result = JSON.parse(data);
+    //document.getElementById("content").innerHTML=obj.name+' '+obj.age+' '+obj.address+''+obj.dob;
+    const f = new Blob([str],{type:'application/json'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(f);
+    a.download = 'info.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    alert('Data saved successfully!');
+
+    }
+
+</script>
+</body>
+</html>
