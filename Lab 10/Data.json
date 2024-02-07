@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Rei",
+        "age":"20",
+        "city":"ctg"
+    },
+    {
+        "name":"Tess",
+        "age":"25",
+        "city":"Dhaka"
+    },
+    {
+        "name":"Robert",
+        "age":"26",
+        "city":"Khulna"
+    },
+    {
+        "name":"Darwin",
+        "age":"27",
+        "city":"Lse"
+    }
+]
