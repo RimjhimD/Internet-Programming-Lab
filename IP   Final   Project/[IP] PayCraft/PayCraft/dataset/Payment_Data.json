@@ -1,0 +1,27 @@
+[
+    {
+      "paymentStatus": true,
+      "uniqueId": "123456",
+      "employeeEmail": "john@example.com",
+      "paymentPerHour": 20.5
+    },
+    {
+      "paymentStatus": false,
+      "uniqueId": "789012",
+      "employeeEmail": "jane@example.com",
+      "paymentPerHour": 18.75
+    },
+    {
+      "paymentStatus": true,
+      "uniqueId": "567890",
+      "employeeEmail": "alice@example.com",
+      "paymentPerHour": 22.0
+    },
+    {
+      "paymentStatus": true,
+      "uniqueId": "987654",
+      "employeeEmail": "bob@example.com",
+      "paymentPerHour": 19.0
+    }
+  ]
+  
